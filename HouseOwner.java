@@ -1,4 +1,4 @@
-package CGLIB;
+package JDKproxy;
 
 import java.util.logging.Logger;
 
