@@ -1,4 +1,4 @@
-package JDKproxy;
+package staticproxy;
 
 import java.util.logging.Logger;
 
