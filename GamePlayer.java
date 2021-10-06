@@ -1,23 +1,29 @@
-package dynamicProxy;
+package proxy;
 
-public class GamePlayer implements IGamePlayer {
-
+public class GamePlayer implements IGamePlayer
+{
     private String name = "";
 
-    public GamePlayer(String name){
+    public GamePlayer(String name)
+    {
         this.name = name;
     }
 
-    public void login(String username, String password) {
-        System.out.println("登录名为 "+username+" 进入游戏，" + name + " 登录成功！");
+    @Override
+    public void login(String user, String password)
+    {
+        System.out.println("登录名为：" + this.name + "登录成功");
     }
 
-    public void killBoss() {
-        System.out.println(this.name + " 击杀了Boss！");
+    @Override
+    public void killBoss()
+    {
+        System.out.println(this.name + "在打怪");
     }
 
-    public void upgrade(){
-        System.out.println(this.name + "升级了！");
+    @Override
+    public void upgrade()
+    {
+        System.out.println(this.name + "又升了一级");
     }
-
 }
